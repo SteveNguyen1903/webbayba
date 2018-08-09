@@ -3,47 +3,87 @@ $ngoc: #17c2a4 // Cyan
 $vang: #ffdd99 // Vang 
 $do: #d74680 // Đỏ 
 $xanh: #3c5499 // Xanh 
+$cam: #eb7d4b // Cam
+$xam: #e7f1f8 // Xám
+
+@mixin base-beaf
+    &:before,
+    &:after
+        content: ' '
+        display: block
+        position: absolute
+        left: 50%
+        background: #000000
+        opacity: .15
+        transform: translateX(-50%)
+
+@mixin flex
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
 
 .home_slider
     background: $tim
     min-height: 368px
-    display: flex
-    justify-content: center
-    align-items: center
-    text-align: center
+    @include flex
     h1
-        font-size: 1.2rem
+        font-size: 2rem
         color: #ffff
         letter-spacing: 1px
     .btn-more
-        background: $vang
+        background: $cam
         font-size: .8rem
+        color: #ffffff
+        font-weight: 600
+        padding: 15px 60px
 
 .home_service
     background: $ngoc
-    min-height: 368px
-    display: flex
-    justify-content: center
-    align-items: center
-    text-align: center
+    min-height: 568px
+    @include flex
     h2
         position: relative
-        margin-bottom: 1rem
-        &:before,
-        &:after
-            content: ' '
-            display: block
-            position: absolute
-            left: 50%
-            background: #000000
-            transform: translateX(-50%)
+        margin-bottom: 1.5rem
+        font-weight: 700
+        color: #ffffff
+        letter-spacing: 1px
+        @include base-beaf
         &:before
             width: 60px
             height: 3px
-            bottom: -8px
+            bottom: -10px
         &:after
             width: 10px
             height: 10px
-            bottom: -12px
-    .img
-        max-width: 120px
+            bottom: -14px
+    p, 
+    h3
+        color: #ffffff
+    h3
+        font-size: 1.3rem
+        padding: 30px 0 20px 0
+    img
+        max-width: 140px
+        padding-top: 40px
+
+
+.home_team
+    min-height: 568px
+    background-color: $xam
+    @include flex
+    h2
+        position: relative
+        margin-bottom: 1.5rem
+        font-weight: 700
+        color: #ffffff
+        letter-spacing: 1px
+        @include base-beaf
+        &:before
+            width: 60px
+            height: 3px
+            bottom: -10px
+        &:after
+            width: 10px
+            height: 10px
+            bottom: -14px

@@ -373,4 +373,8 @@ header {
       .footer .footer_box p:hover {
         color: #30bae7; }
 
+/* navbar */
+.navbar-light {
+  background-color: #87509c !important; }
+
 /*# sourceMappingURL=main.css.map */

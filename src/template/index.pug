@@ -35,24 +35,10 @@ block main
 						|to create awesome websites and applications.
 
 			.row
-				.col-sm-6.col-md-3
-					img(src="./img/home_icon_1.png", alt="")
-					h3 BRANDING
-					p Lorem ipsum dolor sit amet, 
-						| consectetuer adipiscing elit, sed diam nonummy nibh.
-				.col-sm-6.col-md-3
-					img(src="./img/home_icon_2.png", alt="")
-					h3 DESIGN
-					p Sed ut perspiciatis unde omnis iste natus error sit voluptatem  
-				.col-sm-6.col-md-3
-					img(src="./img/home_icon_3.png", alt="")
-					h3 DEVELOPMENT
-					p At vero eos et accusamus et iusto odio dignissimos qui blanditiis praesentium.
-				.col-sm-6.col-md-3
-					img(src="./img/home_icon_4.png", alt="")
-					h3 ROCKET SCIENCE
-					p Et harum quidem rerum est et expedita distinctio. Nam libero tempore.
-	
+				- for(x = 1; x < 5; x++)
+					.col
+						img(src="./img/home_icon_"+x+".png", alt="")
+						h2 fewafewfaewfewfwaeawf
 	
 	section.home_team
 			.container
